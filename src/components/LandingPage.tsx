@@ -166,7 +166,7 @@ const LandingPage = () => {
                     alignItems: 'center',
                     flexDirection: 'row',
                     flexWrap: 'wrap',
-                }} spacing={8}>
+                }} spacing={4}>
                     {languages.map((language, index) => {
                         if (more) {
                             return (
@@ -187,7 +187,7 @@ const LandingPage = () => {
                                 </Grow>
                             )
                         } else {
-                            if (index < 8) {
+                            if (index < 9) {
                                 return (
                                     <Grow in={true} timeout={1000} key={index}>
                                         <Grid item

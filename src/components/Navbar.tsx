@@ -52,7 +52,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        ChrisAlvis
                     </Typography>
 
                     <Box sx={{flexGrow: 1}}>

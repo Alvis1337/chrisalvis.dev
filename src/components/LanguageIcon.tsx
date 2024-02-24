@@ -8,7 +8,7 @@ interface LanguageIconProps {
 
 const LanguageIcon = (props: LanguageIconProps) => {
     return (
-            <Grid item component={"img"} xs={2} src={props.image} alt={props.alt} />
+            <Grid item component={"img"} xs={4} src={props.image} alt={props.alt} />
     );
 }
 
