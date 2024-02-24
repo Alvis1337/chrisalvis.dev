@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+[![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React + TypeScript + Vite CV Site
 
-Currently, two official plugins are available:
+This site is a personal CV site that I am using to showcase my skills and experience.
+It is a work in progress and will be updated as I learn new things and gain new experiences.
+This site uses React, SWC, Vite, TypeScript, Redux, Redux Toolkit, Redux Persist, Material UI and React Router DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Functionality
 
-## Expanding the ESLint configuration
+React, SWC, Vite and TypeScript
+  - React with Typescript is the core of this app. Using Vite as the build tool and SWC as the transpiler offers a fast and efficient development environment compared to other tools like Webpack and Babel.
+Redux, Redux Toolkit and Redux Persist
+  - Redux is used to manage the state of the app. Redux Toolkit is used to simplify the Redux setup and Redux Persist is used to persist the state of the app to local storage.
+Material UI
+  - Material UI is used to style the app. It is a popular and well supported library that offers a wide range of components and styles. It is also very extensible and customisable.
+React Router DOM
+  - React Router DOM is used to manage the routing of the app. It is a popular and well supported library that offers a wide range of routing options and features especially with its recent updates.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+This app requires [Node.js](https://nodejs.org/) to run.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Install the dependencies and devDependencies and start the server.
+
+```sh
+npm install
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
