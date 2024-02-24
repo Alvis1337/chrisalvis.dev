@@ -17,13 +17,8 @@ Material UI
 React Router DOM
   - React Router DOM is used to manage the routing of the app. It is a popular and well supported library that offers a wide range of routing options and features especially with its recent updates.
 
-## Installation
+## CI/CD
+Docker and Github Actions
 
-This app requires [Node.js](https://nodejs.org/) to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-npm install
-npm run dev
-```
+- The Dockerfile is used to build the app and create a container image. It uses a multi-stage build to create a small and efficient image.
+- Github Actions is used to build and push the image to the Github Container Registry using your Github PAT to push to your own registry.
