@@ -221,6 +221,7 @@ const LandingPage = () => {
                 <Grid container sx={{
                     justifyContent: 'center',
                     alignItems: 'center',
+                    pb: '4rem'
                 }} spacing={2}>
                     {workExperience.map((job, index) => {
                         return (

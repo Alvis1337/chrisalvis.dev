@@ -41,6 +41,13 @@ const Layout = () => {
                     }
                 }
             },
+            MuiAppBar: {
+                styleOverrides: {
+                    root: {
+                        backgroundColor: themeStatus ? '#272727' : '#272727',
+                    }
+                }
+            },
         }
     })
 
