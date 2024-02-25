@@ -24,9 +24,14 @@ jobs:
         id: repo-name
         run: echo "::set-output name=repo::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')"
 
+      - name: Generate SHA hash
+        id: sha
+        run: |
+          echo "::set-output name=SHA::$(openssl rand -hex 6)"
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ steps.repo-name.outputs.repo }}:latest
+          tags: ghcr.io/${{ steps.repo-name.outputs.repo }}:${{ steps.sha.outputs.SHA }}
