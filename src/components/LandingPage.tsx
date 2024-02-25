@@ -1,8 +1,12 @@
-import {Button, Grid, Grow} from "@mui/material";
+import {Button, Grid, Grow, IconButton} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import LanguageIcon from "./LanguageIcon.tsx";
 import {useState} from "react";
 import WorkHistory from "./WorkHistory.tsx";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import ExperienceMarquee from "./ExperienceMarquee.tsx";
 
 const LandingPage = () => {
 
@@ -147,16 +151,30 @@ const LandingPage = () => {
                     <Grid item>
                         <Typography variant={"h1"} textAlign={"left"}>Chris Alvis</Typography>
                     </Grid>
-                    <Grid item>
-                        <Typography variant={"h4"} color={'#21CE6B'} fontWeight={"bold"} textAlign={"left"}>Full Stack
-                            Developer</Typography>
+                    <Grid item xs={12}>
+                        <ExperienceMarquee/>
                     </Grid>
                     <Grid item>
-                        <Typography variant={"h4"} fontWeight={"light"} textAlign={"left"}>5 Years of
-                            Experience</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Button sx={{mt: '1rem'}} variant={"contained"} size={'large'}> Contact </Button>
+                        <Grid container sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                        }}>
+                            <Grid item>
+                                <IconButton component={'a'} target={"_blank"} href={'https://github.com/Alvis1337'}>
+                                    <GitHubIcon/>
+                                </IconButton>
+                            </Grid>
+                            <Grid item>
+                                <IconButton component={'a'} target={"_blank"} href={'https://www.linkedin.com/in/nurse-alvis/'}>
+                                    <LinkedInIcon/>
+                                </IconButton>
+                            </Grid>
+                            <Grid item>
+                                <IconButton component={'a'} target={"_blank"} href={'mailto:hire@chrisalvis.dev'}>
+                                    <AlternateEmailIcon/>
+                                </IconButton>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

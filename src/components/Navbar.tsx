@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import {Button, FormControlLabel, FormGroup, Grid} from "@mui/material";
+import {FormControlLabel, FormGroup, Grid} from "@mui/material";
 import {useAppDispatch, useAppSelector} from "../store/hooks.ts";
 import {setDarkTheme} from "../store/slices/themeState.tsx";
 import MaterialUISwitch from "./MaterialUISwitch.tsx";
@@ -74,7 +74,6 @@ function Navbar() {
                                         onChange={handleTheme}
                                         label={''}/>
                                 </FormGroup>
-                                <Button variant={"contained"} > CV </Button>
                             </Grid>
                         </Grid>
                     </Box>

@@ -48,6 +48,13 @@ const Layout = () => {
                     }
                 }
             },
+            MuiIconButton: {
+                styleOverrides: {
+                    root: {
+                        color: themeStatus ? 'white' : 'black',
+                    }
+                }
+            }
         }
     })
 
