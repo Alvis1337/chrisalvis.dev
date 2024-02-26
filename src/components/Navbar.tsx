@@ -1,9 +1,6 @@
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import {FormControlLabel, FormGroup, Grid} from "@mui/material";
+import {Button, FormControlLabel, FormGroup, Grid} from "@mui/material";
 import {useAppDispatch, useAppSelector} from "../store/hooks.ts";
 import {setDarkTheme} from "../store/slices/themeState.tsx";
 import MaterialUISwitch from "./MaterialUISwitch.tsx";
@@ -20,62 +17,38 @@ function Navbar() {
 
     return (
         <AppBar position="static" sx={{mb: '12rem'}}>
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    <Typography
-                        variant="h4"
-                        noWrap
-                        sx={{
-                            mr: 2,
-                            display: {xs: 'none', md: 'flex'},
-                            fontWeight: 700,
-                            color: 'inherit',
+            <Toolbar disableGutters>
+                <Grid container sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                }}>
+                    <Grid item xs={6} sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'start',
+                    }}>
+                        <Button component={'a'} href={'https://github.com/Alvis1337/chrisalvis.dev'} sx={{
                             textDecoration: 'none',
-                        }}
-                    >
-                        ChrisAlvis
-                    </Typography>
-
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: {xs: 'flex', md: 'none'},
-                            fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        ChrisAlvis
-                    </Typography>
-
-                    <Box sx={{flexGrow: 1}}>
-                        <Grid container sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        }}>
-                            <Grid item xs={12} sx={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'end',
-                            }}>
-                                <FormGroup>
-                                    <FormControlLabel
-                                        control={<MaterialUISwitch sx={{m: 1}}/>}
-                                        checked={!!getTheme}
-                                        defaultChecked
-                                        onChange={handleTheme}
-                                        label={''}/>
-                                </FormGroup>
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Toolbar>
-            </Container>
+                            ml: '2rem',
+                            color: 'white'
+                        }} target={"_blank"}>Source</Button>
+                    </Grid>
+                    <Grid item xs={6} sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'end',
+                    }}>
+                        <FormGroup>
+                            <FormControlLabel
+                                control={<MaterialUISwitch sx={{m: 1}}/>}
+                                checked={!!getTheme}
+                                defaultChecked
+                                onChange={handleTheme}
+                                label={''}/>
+                        </FormGroup>
+                    </Grid>
+                </Grid>
+            </Toolbar>
         </AppBar>
     );
 }
