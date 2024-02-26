@@ -1,5 +1,7 @@
 [![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev)
 
+![Docker Image CI](https://github.com/alvis1337/chrisalvis.dev/actions/workflows/docker.yml/badge.svg)
+
 # React + TypeScript + Vite CV Site
 
 This site is a personal CV site that I am using to showcase my skills and experience.
