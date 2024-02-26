@@ -1,7 +1,6 @@
 import Typography from "@mui/material/Typography";
 import {useEffect, useState} from "react";
 import BlinkCursor from "./BlinkCursor.tsx";
-import {Grid} from "@mui/material";
 
 const ExperienceMarquee = () => {
     const experiencedIn = [
@@ -49,13 +48,13 @@ const ExperienceMarquee = () => {
     }, [visibleText, index])
 
     return (
-        <Typography variant={"h4"} color={'#21CE6B'} fontWeight={"bold"}>
-            <Grid item sx={{
-                display: 'flex',
-                flexDirection: 'row',
-            }}>
+        <Typography variant={"h4"} color={'#21CE6B'} textAlign={"center"} fontWeight={"bold"} sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
                 {visibleText}{typing ? <BlinkCursor/> : '|'}
-            </Grid>
         </Typography>
     )
 }

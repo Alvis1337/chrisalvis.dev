@@ -148,8 +148,8 @@ const LandingPage = () => {
                     <Grid item>
                         <Typography variant={"h4"} textAlign={"left"}>Hello, I'm</Typography>
                     </Grid>
-                    <Grid item>
-                        <Typography variant={"h1"} textAlign={"left"}>Chris Alvis</Typography>
+                    <Grid item xs={12}>
+                        <Typography variant={"h1"} textAlign={"center"} >Chris Alvis</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <ExperienceMarquee/>
