@@ -11,6 +11,7 @@ function Navbar() {
     const theme = useAppSelector((state) => state.themeState)
     const getTheme = !theme ? false : theme;
 
+
     const handleTheme = () => {
         dispatch(setDarkTheme(!getTheme));
     }
