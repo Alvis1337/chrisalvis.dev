@@ -6,6 +6,6 @@ import compression from "vite-plugin-compression2";
 export default defineConfig({
   plugins: [
       react(),
-    compression({ algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/], deleteOriginalAssets: true })
+    compression({ algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/] })
   ],
 })
