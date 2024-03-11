@@ -8,7 +8,7 @@ interface LanguageIconProps {
 
 const LanguageIcon = (props: LanguageIconProps) => {
     return (
-            <Grid item component={"img"} xs={4} src={props.image} alt={props.alt} sx={{height: '128px', width: '128px'}}/>
+            <Grid item component={"img"} xs={4} src={props.image} alt={props.alt} sx={{height: 'auto', width: {xs: '64px', md: '128px'}}}/>
     );
 }
 
