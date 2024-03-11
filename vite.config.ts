@@ -12,7 +12,7 @@ export default defineConfig({
         compression({algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/]}),
         VitePWA({
             registerType: 'autoUpdate',
-            includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+            includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'android-*', 'favicon-*'],
             manifest: {
                 name: 'Chris Alvis',
                 short_name: 'ChrisAlvis',
@@ -20,15 +20,35 @@ export default defineConfig({
                 theme_color: '#000000',
                 icons: [
                     {
-                        src: 'pwa-192x192.png',
+                        src: 'android-chrome-192x192.png',
                         sizes: '192x192',
                         type: 'image/png'
                     },
                     {
-                        src: 'pwa-512x512.png',
+                        src: 'android-chrome-512x512.png',
                         sizes: '512x512',
-                        type: 'image/png'
-                    }
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'apple-touch-icon.png',
+                        sizes: '180x180',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'favicon-16x16.png',
+                        sizes: '16x16',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'favicon-32x32.png',
+                        sizes: '32x32',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'favicon.ico',
+                        sizes: '64x64 32x32 24x24 16x16',
+                        type: 'image/x-icon',
+                    },
                 ]
             }
         }),        webfontDownload([
