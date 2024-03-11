@@ -10,6 +10,24 @@ import ExperienceMarquee from "./ExperienceMarquee.tsx";
 
 const LandingPage = () => {
 
+    const links = [
+        {
+            title: "Github",
+            href: "https://github.com/Alvis1337",
+            icon: <GitHubIcon/>
+        },
+        {
+            title: 'LinkedIn',
+            href: "https://www.linkedin.com/in/devops-alvis/",
+            icon: <LinkedInIcon/>
+        },
+        {
+            title: "Email",
+            href: "mailto:hire@chrisalvis.dev",
+            icon: <AlternateEmailIcon/>
+        }
+    ]
+
     const languages = [
         {
             image: "https://img.icons8.com/color/512/000000/kubernetes.png",
@@ -135,7 +153,7 @@ const LandingPage = () => {
                         <Typography variant={"h4"} textAlign={"left"}>Hello, I'm</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                        <Typography variant={"h1"} textAlign={"center"} >Chris Alvis</Typography>
+                        <Typography variant={"h1"} textAlign={"center"}>Chris Alvis</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <ExperienceMarquee/>
@@ -146,19 +164,14 @@ const LandingPage = () => {
                             flexDirection: 'row',
                         }}>
                             <Grid item>
-                                <IconButton component={'a'} target={"_blank"} href={'https://github.com/Alvis1337'}>
-                                    <GitHubIcon/>
-                                </IconButton>
-                            </Grid>
-                            <Grid item>
-                                <IconButton component={'a'} target={"_blank"} href={'https://www.linkedin.com/in/devops-alvis/'}>
-                                    <LinkedInIcon/>
-                                </IconButton>
-                            </Grid>
-                            <Grid item>
-                                <IconButton component={'a'} target={"_blank"} href={'mailto:hire@chrisalvis.dev'}>
-                                    <AlternateEmailIcon/>
-                                </IconButton>
+                                {links.map((link, index) => {
+                                        return (
+                                            <IconButton key={index} component={'a'} title={link.title} target={"_blank"} href={link.href}>
+                                                {link.icon}
+                                            </IconButton>
+                                        )
+                                    }
+                                )}
                             </Grid>
                         </Grid>
                     </Grid>

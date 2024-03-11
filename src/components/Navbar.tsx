@@ -45,7 +45,7 @@ function Navbar() {
                                 checked={!!getTheme}
                                 defaultChecked
                                 onChange={handleTheme}
-                                label={''}/>
+                                label={'Theme Switch'}/>
                         </FormGroup>
                     </Grid>
                 </Grid>
