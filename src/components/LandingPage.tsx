@@ -1,12 +1,12 @@
 import {Button, Grid, Grow, IconButton} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import LanguageIcon from "./LanguageIcon.tsx";
-import {useState} from "react";
+import {Suspense, useState, lazy} from "react";
 import WorkHistory from "./WorkHistory.tsx";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import ExperienceMarquee from "./ExperienceMarquee.tsx";
+import LoadingExperienceMarquee from "./LoadingExperienceMarquee.tsx";
 
 const LandingPage = () => {
 
@@ -27,7 +27,6 @@ const LandingPage = () => {
             icon: <AlternateEmailIcon/>
         }
     ]
-
     const languages = [
         {
             image: "https://img.icons8.com/color/512/000000/kubernetes.png",
@@ -135,6 +134,8 @@ const LandingPage = () => {
 
     const [more, setMore] = useState(false);
 
+    const ExperienceMarquee = lazy(() => import('./ExperienceMarquee.tsx'));
+
     return (
         <Grid container sx={{
             justifyContent: 'center',
@@ -156,7 +157,9 @@ const LandingPage = () => {
                         <Typography variant={"h1"} textAlign={"center"}>Chris Alvis</Typography>
                     </Grid>
                     <Grid item xs={12}>
+                        <Suspense fallback={<LoadingExperienceMarquee/>}>
                         <ExperienceMarquee/>
+                        </Suspense>
                     </Grid>
                     <Grid item>
                         <Grid container sx={{
