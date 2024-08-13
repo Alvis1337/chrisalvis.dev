@@ -1,6 +1,6 @@
 [![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev)
 
-![Docker Image CI](https://github.com/alvis1337/chrisalvis.dev/actions/workflows/docker.yml/badge.svg)
+[![Build and Deploy to AWS S3](https://github.com/Alvis1337/chrisalvis.dev/actions/workflows/deploy-s3.yaml/badge.svg)](https://github.com/Alvis1337/chrisalvis.dev/actions/workflows/deploy-s3.yaml)
 
 # React + TypeScript + Vite CV Site
 
