@@ -61,8 +61,11 @@ const Layout = () => {
     return (
         <ThemeProvider theme={theme}>
             <Grid container sx={{
-                height: "100vh",
-                width: '100vw',
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+                minHeight: '100vh',
+                justifyContent: 'space-between',
             }}>
                 <Grid item xs={12}>
                     <ThemeProvider theme={theme}>
