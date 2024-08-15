@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-
+    paths-ignore:
+      - 'README.md'
+      - '.github/workflows/deploy-s3.yaml'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -28,8 +30,8 @@ jobs:
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
-        AWS_S3_BUCKET: chrisalvis.dev  # Replace with your S3 bucket name
+        AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_NAME }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-east-2'  # Replace with your AWS region
-        SOURCE_DIR: 'dist'  # Replace with the directory of your build artifacts
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_DIR: ${{ secrets.S3_SOURCE_DIR }}
