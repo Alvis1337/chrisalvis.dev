@@ -17,7 +17,7 @@ function Navbar() {
     }
 
     return (
-        <AppBar position="static" sx={{mb: '12rem'}}>
+        <AppBar position="static" sx={{mb: '6rem'}}>
             <Toolbar disableGutters>
                 <Grid container sx={{
                     display: 'flex',

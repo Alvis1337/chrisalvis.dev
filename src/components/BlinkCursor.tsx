@@ -1,4 +1,3 @@
-import Typography from "@mui/material/Typography";
 import {useEffect, useState} from "react";
 
 const BlinkCursor = () => {
@@ -13,9 +12,7 @@ const BlinkCursor = () => {
     }, [])
 
     return (
-        <Typography variant={"h4"} color={'#21CE6B'} fontWeight={"bold"}>
-            {blinkCursor ? '|' : <> &nbsp; </>}
-        </Typography>
+            blinkCursor ? '|' : <>&nbsp;</>
     )
 }
 
