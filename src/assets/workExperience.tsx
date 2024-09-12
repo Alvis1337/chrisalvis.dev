@@ -5,9 +5,9 @@ export const workExperienceList = [
         startDate: "April 2019",
         endDate: "Present",
         description: [
-            "Deployed and maintained production K8s clusters leveraging IaC",
+            "Deployed and maintained production Kubernetes clusters leveraging IaC",
             "Wrote and deployed Puppet modules and Ansible scripts for SSL certs, server updates, etc, to minimize time spent on process that should be automated",
-            "Containerized entire app ecosystems in order to create deployments so they could be migrated to K8s clusters",
+            "Containerized entire app ecosystems in order to create deployments so they could be migrated to Kubernetes clusters",
             "Primary Fullstack developer for the past 5 years implementing Django, React, Typescript, Laravel",
             "Became the primary individual responsible for current and new client relationships",
             "Led initiatives in disaster recovery, orchestrated seamless cloud migrations, and optimized operations for small to medium businesses"
