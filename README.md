@@ -1,53 +1,83 @@
 [![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.dev)
 [![Build and Deploy to AWS S3](https://github.com/Alvis1337/chrisalvis.dev/actions/workflows/deploy-s3.yaml/badge.svg)](https://github.com/Alvis1337/chrisalvis.dev/actions/workflows/deploy-s3.yaml)
 
-# React + TypeScript + Vite CV Site
+# Personal CV Website
 
-This site is a personal CV site used to showcase my skills and experience. It is a work in progress and will be updated as I learn new things and gain new experiences.
+A modern, responsive CV website built with React and TypeScript. Show off your skills, experience, and certifications with a clean, professional design that automatically deploys to AWS.
 
-## Technologies
+## What is this?
 
-- **React**: Core of the app, with TypeScript for type safety.
-- **SWC**: Transpiler used for fast builds.
-- **Vite**: Build tool for efficient development.
-- **Redux & Redux Toolkit**: State management and setup simplification.
-- **Redux Persist**: Persists app state to local storage.
-- **Material UI**: Styling with a wide range of components.
-- **React Router DOM**: Manages routing within the app.
+This is a template for creating your own online resume/CV website. You can customize everything about it - your name, work history, skills, certifications, and social links. Once you set it up, any changes you push to GitHub will automatically update your live website.
 
-## Instructions
+## Quick Start
 
-### Setup
+**Prerequisites:** You need Node.js installed on your computer. If you don't have it, download it from [nodejs.org](https://nodejs.org/) (get the LTS version).
 
-1. Clone the repository and install dependencies:
+### Get it running locally
 
+1. Download this project to your computer:
 ```bash
 git clone https://github.com/Alvis1337/chrisalvis.dev.git
 cd chrisalvis.dev
+```
+
+2. Install the dependencies:
+```bash
 npm install
 ```
 
-2. Configure the following files in `src/assets`:
+3. Start the development server:
+```bash
+npm run dev
+```
 
-- **`certificationList.tsx`**: Add an image, a link, and an alt text to display certifications with hyperlinks.
-- **`greeting.tsx`**: Edit the greeting and name in the top left of the page.
-- **`socialLinks.tsx`**: Add social media links under the marquee. You can import your own icons if needed.
-- **`technologyIcons.tsx`**: List technologies you're comfortable with. A "Show More" button will appear if there are many.
-- **`workExperience.tsx`**: Configure item alignment using `flex-start` or `flex-end`, and map each item in the array for a bullet-pointed list.
+4. Open your browser and go to the URL shown in the terminal (usually `http://localhost:5173`)
 
-### Building
+That's it! You should see the website running on your computer.
 
-1. Configure environment variables for the GitHub Actions pipeline:
-- `AWS_ACCESS_KEY_ID`
-- `AWS_BUCKET_NAME`
-- `AWS_REGION`
-- `AWS_SECRET_ACCESS_KEY`
-- `S3_SOURCE_DIR`
+## Making it yours
 
-2. Review and adjust the GitHub Actions ignore settings if necessary.
+You'll want to customize the content to show your own information. All the configuration files are in the `src/assets` folder. See our [Customization Guide](docs/CUSTOMIZATION.md) for step-by-step instructions on editing:
 
-3. Once configured, your static files will be automatically pushed to the S3 bucket.
+- Your name and greeting
+- Work experience
+- Skills and technologies
+- Social media links
+- Certifications
 
-## CI/CD
+## Deploying to the web
 
-GitHub Actions is used for continuous integration and deployment. The workflow builds and pushes the app to an S3 bucket configured to host a static website.
+Want to put your CV online so others can see it? We have detailed guides for:
+
+- **[AWS Deployment](docs/AWS_DEPLOYMENT.md)** - Host your site on Amazon S3 (free tier eligible)
+- **[Cloudflare Setup](docs/CLOUDFLARE_DOMAIN.md)** - Connect a custom domain name
+- **[GitHub Actions](docs/GITHUB_ACTIONS.md)** - Automatically deploy when you make changes
+
+The whole setup can be done with AWS free tier, meaning it costs you nothing for the first year (and very little after that).
+
+## What's inside?
+
+This project uses some popular web development tools:
+
+- **React** - The framework that powers the website
+- **TypeScript** - Adds type safety to catch bugs early
+- **Vite** - Makes development fast and builds optimized
+- **Material UI** - Provides the styled components
+- **Redux** - Manages application state (like dark/light mode)
+- **GitHub Actions** - Automatically deploys your changes
+
+## Need help?
+
+Check out our detailed documentation in the `docs` folder:
+
+- [Quick Reference](docs/QUICK_REFERENCE.md) - Visual overview, flowcharts, and checklists
+- [Getting Started Guide](docs/GETTING_STARTED.md)
+- [Customization Guide](docs/CUSTOMIZATION.md)
+- [AWS Deployment Guide](docs/AWS_DEPLOYMENT.md)
+- [Cloudflare Domain Setup](docs/CLOUDFLARE_DOMAIN.md)
+- [GitHub Actions Setup](docs/GITHUB_ACTIONS.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+
+## License
+
+This project is open source. Feel free to use it for your own CV website!
