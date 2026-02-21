@@ -37,23 +37,31 @@ That's it! You should see the website running on your computer.
 
 ## Making it yours
 
-You'll want to customize the content to show your own information. All the configuration files are in the `src/assets` folder. See our [Customization Guide](docs/CUSTOMIZATION.md) for step-by-step instructions on editing:
+You'll want to customize the content to show your own information. All the configuration files are in the `src/assets` folder. Here are the key files to edit:
 
-- Your name and greeting
-- Work experience
-- Skills and technologies
-- Social media links
-- Certifications
+- **`greeting.tsx`** - Your name and greeting message
+- **`workExperience.tsx`** - Your work history and job descriptions
+- **`technologyIcons.tsx`** - Skills and technologies you know
+- **`socialLinks.tsx`** - Your social media and contact links
+- **`certificationList.tsx`** - Your certifications and achievements
 
 ## Deploying to the web
 
-Want to put your CV online so others can see it? We have detailed guides for:
+This project is configured to automatically deploy to AWS S3 using GitHub Actions. When you push changes to the `main` branch:
 
-- **[AWS Deployment](docs/AWS_DEPLOYMENT.md)** - Host your site on Amazon S3 (free tier eligible)
-- **[Cloudflare Setup](docs/CLOUDFLARE_DOMAIN.md)** - Connect a custom domain name
-- **[GitHub Actions](docs/GITHUB_ACTIONS.md)** - Automatically deploy when you make changes
+1. GitHub Actions runs the build process
+2. The built files are synced to your S3 bucket
+3. Your website is instantly updated
 
-The whole setup can be done with AWS free tier, meaning it costs you nothing for the first year (and very little after that).
+### AWS Setup Requirements
+
+- An AWS account with an S3 bucket configured for static website hosting
+- AWS credentials stored as GitHub repository secrets:
+  - `AWS_BUCKET_NAME` - Your S3 bucket name
+  - `AWS_ACCESS_KEY_ID` - Your AWS access key
+  - `AWS_SECRET_ACCESS_KEY` - Your AWS secret key
+  - `AWS_REGION` - Your bucket's region (e.g., `us-east-2`)
+  - `S3_SOURCE_DIR` - Source directory to deploy (usually `dist`)
 
 ## What's inside?
 
@@ -66,17 +74,21 @@ This project uses some popular web development tools:
 - **Redux** - Manages application state (like dark/light mode)
 - **GitHub Actions** - Automatically deploys your changes
 
-## Need help?
+## Development Commands
 
-Check out our detailed documentation in the `docs` folder:
+```bash
+# Start development server
+npm run dev
 
-- [Quick Reference](docs/QUICK_REFERENCE.md) - Visual overview, flowcharts, and checklists
-- [Getting Started Guide](docs/GETTING_STARTED.md)
-- [Customization Guide](docs/CUSTOMIZATION.md)
-- [AWS Deployment Guide](docs/AWS_DEPLOYMENT.md)
-- [Cloudflare Domain Setup](docs/CLOUDFLARE_DOMAIN.md)
-- [GitHub Actions Setup](docs/GITHUB_ACTIONS.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
+```
 
 ## License
 
