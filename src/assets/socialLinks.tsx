@@ -24,7 +24,7 @@ export const socialLinksList = [
     },
     {
         title: "Resume",
-        href: "https://s3.us-east-2.amazonaws.com/chrisalvis.dev/resume.pdf",
+        href: "https://s3.us-east-2.amazonaws.com/chrisalvis.me/resume.pdf",
         icon: <ContactPageIcon/>,
         alt: "My Resume"
     },

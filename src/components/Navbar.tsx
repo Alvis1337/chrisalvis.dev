@@ -28,7 +28,7 @@ function Navbar() {
                         flexDirection: 'row',
                         justifyContent: 'start',
                     }}>
-                        <Button component={'a'} href={'https://github.com/Alvis1337/chrisalvis.dev'} sx={{
+                        <Button component={'a'} href={'https://github.com/Alvis1337/chrisalvis.me'} sx={{
                             textDecoration: 'none',
                             ml: '2rem',
                             color: 'white'
