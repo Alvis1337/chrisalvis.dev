@@ -47,21 +47,24 @@ You'll want to customize the content to show your own information. All the confi
 
 ## Deploying to the web
 
-This project is configured to automatically deploy to AWS S3 using GitHub Actions. When you push changes to the `main` branch:
+This project uses a two-step deployment process:
 
-1. GitHub Actions runs the build process
-2. The built files are synced to your S3 bucket
-3. Your website is instantly updated
+**Step 1: Automatic Docker Build (GitHub Actions)**
 
-### AWS Setup Requirements
+When you push changes to the `main` branch:
+1. GitHub Actions builds a Docker container
+2. Pushes to GitHub Container Registry (ghcr.io)
+3. Tagged with: `main-{git-sha}` and `latest`
 
-- An AWS account with an S3 bucket configured for static website hosting
-- AWS credentials stored as GitHub repository secrets:
-  - `AWS_BUCKET_NAME` - Your S3 bucket name
-  - `AWS_ACCESS_KEY_ID` - Your AWS access key
-  - `AWS_SECRET_ACCESS_KEY` - Your AWS secret key
-  - `AWS_REGION` - Your bucket's region (e.g., `us-east-2`)
-  - `S3_SOURCE_DIR` - Source directory to deploy (usually `dist`)
+**Step 2: Deploy with Helmfile**
+
+```bash
+./deploy.sh
+```
+
+This automatically updates `values.yaml` with the latest image tag and deploys using `helmfile sync`.
+
+Your site will be live at https://chrisalvis.me
 
 ## What's inside?
 
