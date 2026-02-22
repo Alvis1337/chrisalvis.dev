@@ -6,17 +6,13 @@ echo ""
 
 # Get the latest image tag
 LATEST_TAG=$(git rev-parse --short HEAD)
-IMAGE="ghcr.io/alvisleet/chrisalvis.me:main-${LATEST_TAG}"
+IMAGE_TAG="main-${LATEST_TAG}"
 
-echo "Image: $IMAGE"
-echo ""
+echo "Updating values.yaml with image tag: $IMAGE_TAG"
+sed -i.bak "s|tag: main-.*|tag: $IMAGE_TAG|g" values.yaml && rm values.yaml.bak
 
-# Deploy with Helm
-helm upgrade --install chrisalvis-me ./helm/chrisalvis-me \
-  --namespace chrisalvis-me \
-  --create-namespace \
-  --set image.tag="main-${LATEST_TAG}" \
-  --wait
+echo "Deploying with helmfile..."
+helmfile sync
 
 echo ""
 echo "✅ Deployment complete!"
