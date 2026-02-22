@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Helmfile values (contains environment-specific image tags)
+values.yaml
+values.yaml.bak
