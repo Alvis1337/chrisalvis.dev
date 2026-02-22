@@ -1,9 +1,9 @@
 [![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.me.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.me)
-[![Build and Deploy to AWS S3](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-s3.yaml/badge.svg)](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-s3.yaml)
+[![Build and Push Docker Image](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-k8s.yaml/badge.svg)](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-k8s.yaml)
 
 # Personal CV Website
 
-A modern, responsive CV website built with React and TypeScript. Show off your skills, experience, and certifications with a clean, professional design that automatically deploys to AWS.
+A modern, responsive CV website built with React and TypeScript. Show off your skills, experience, and certifications with a clean, professional design. Deployed to a local Kubernetes cluster.
 
 ## What is this?
 
