@@ -72,7 +72,9 @@ This project uses some popular web development tools:
 - **Vite** - Makes development fast and builds optimized
 - **Material UI** - Provides the styled components
 - **Redux** - Manages application state (like dark/light mode)
-- **GitHub Actions** - Automatically deploys your changes
+- **Docker** - Containerizes the application
+- **Helm** - Manages Kubernetes deployments
+- **GitHub Actions** - Automatically builds and deploys your changes
 
 ## Development Commands
 

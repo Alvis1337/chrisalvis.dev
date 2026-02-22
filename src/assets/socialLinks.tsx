@@ -18,7 +18,7 @@ export const socialLinksList = [
     },
     {
         title: "Email",
-        href: "mailto:hire@chrisalvis.dev",
+        href: "mailto:hire@chrisalvis.me",
         icon: <AlternateEmailIcon/>,
         alt: "My email"
     },
