@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.github
+.idea
+.nvmrc
+.eslintrc.cjs
+*.md
+k8scontext.md
+helm
+.gitignore
