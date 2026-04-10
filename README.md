@@ -1,100 +1,32 @@
-[![wakatime](https://wakatime.com/badge/github/Alvis1337/chrisalvis.me.svg)](https://wakatime.com/badge/github/Alvis1337/chrisalvis.me)
-[![Build and Push Docker Image](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-k8s.yaml/badge.svg)](https://github.com/Alvis1337/chrisalvis.me/actions/workflows/deploy-k8s.yaml)
+# chrisalvis.me
 
-# Personal CV Website
+Personal portfolio / resume site.
 
-A modern, responsive CV website built with React and TypeScript. Show off your skills, experience, and certifications with a clean, professional design. Deployed to a local Kubernetes cluster.
+**Live:** [chrisalvis.me](https://chrisalvis.me)
 
-## What is this?
+## Tech Stack
 
-This is a template for creating your own online resume/CV website. You can customize everything about it - your name, work history, skills, certifications, and social links. Once you set it up, any changes you push to GitHub will automatically update your live website.
+**Frontend:** React 18, TypeScript, Vite, Material UI, Redux Toolkit  
+**Hosting:** Cloudflare Pages  
+**Deploy:** GitHub Actions → Cloudflare Pages on push to `main`
 
-## Quick Start
+## Local Development
 
-**Prerequisites:** You need Node.js installed on your computer. If you don't have it, download it from [nodejs.org](https://nodejs.org/) (get the LTS version).
-
-### Get it running locally
-
-1. Download this project to your computer:
-```bash
-git clone https://github.com/Alvis1337/chrisalvis.me.git
-cd chrisalvis.me
-```
-
-2. Install the dependencies:
 ```bash
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
 ```
 
-4. Open your browser and go to the URL shown in the terminal (usually `http://localhost:5173`)
+## Deployment
 
-That's it! You should see the website running on your computer.
+Push to `main` — GitHub Actions handles the rest.
 
-## Making it yours
-
-You'll want to customize the content to show your own information. All the configuration files are in the `src/assets` folder. Here are the key files to edit:
-
-- **`greeting.tsx`** - Your name and greeting message
-- **`workExperience.tsx`** - Your work history and job descriptions
-- **`technologyIcons.tsx`** - Skills and technologies you know
-- **`socialLinks.tsx`** - Your social media and contact links
-- **`certificationList.tsx`** - Your certifications and achievements
-
-## Deploying to the web
-
-This project uses a two-step deployment process:
-
-**Step 1: Automatic Docker Build (GitHub Actions)**
-
-When you push changes to the `main` branch:
-1. GitHub Actions builds a Docker container
-2. Pushes to GitHub Container Registry (ghcr.io)
-3. Tagged with: `main-{git-sha}` and `latest`
-
-**Step 2: Deploy with Helmfile**
-
+To deploy manually:
 ```bash
-./deploy.sh
-```
-
-This automatically updates `values.yaml` with the latest image tag and deploys using `helmfile sync`.
-
-Your site will be live at https://chrisalvis.me
-
-## What's inside?
-
-This project uses some popular web development tools:
-
-- **React** - The framework that powers the website
-- **TypeScript** - Adds type safety to catch bugs early
-- **Vite** - Makes development fast and builds optimized
-- **Material UI** - Provides the styled components
-- **Redux** - Manages application state (like dark/light mode)
-- **Docker** - Containerizes the application
-- **Helm** - Manages Kubernetes deployments
-- **GitHub Actions** - Automatically builds and deploys your changes
-
-## Development Commands
-
-```bash
-# Start development server
-npm run dev
-
-# Build for production
 npm run build
-
-# Preview production build
-npm run preview
-
-# Run linter
-npm run lint
+npx wrangler pages deploy dist --project-name chrisalvis-me
 ```
 
-## License
+## Customization
 
-This project is open source. Feel free to use it for your own CV website!
+All content is in `src/assets/` — edit greeting, work experience, skills, certifications, and social links there.
