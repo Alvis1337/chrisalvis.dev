@@ -1,9 +1,0 @@
-repositories: []
-
-releases:
-  - name: chrisalvis-me
-    namespace: chrisalvis-me
-    createNamespace: true
-    chart: ./helm/chrisalvis-me
-    values:
-      - ./values.yaml
