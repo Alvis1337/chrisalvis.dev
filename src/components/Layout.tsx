@@ -1,4 +1,4 @@
-import {createTheme, CssBaseline, Grid, ThemeProvider} from "@mui/material";
+import {Box, createTheme, CssBaseline, Grid, ThemeProvider} from "@mui/material";
 import {Outlet} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 import Navbar from "./Navbar.tsx";
@@ -71,7 +71,9 @@ const Layout = () => {
                     <CssBaseline/>
                     <Navbar/>
                     <ToastContainer/>
-                    <Outlet/>
+                    <Box component="main">
+                        <Outlet/>
+                    </Box>
                 </Grid>
             </Grid>
         </ThemeProvider>

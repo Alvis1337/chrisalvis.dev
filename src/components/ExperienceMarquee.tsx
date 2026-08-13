@@ -42,7 +42,7 @@ const ExperienceMarquee = () => {
     }, [typing, index])
 
     return (
-        <Typography variant={"h4"} color={'#21CE6B'} textAlign={"center"} fontWeight={"bold"} sx={{
+        <Typography variant={"h4"} component={"p"} color={'#21CE6B'} textAlign={"center"} fontWeight={"bold"} sx={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',

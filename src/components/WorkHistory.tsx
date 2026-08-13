@@ -22,7 +22,7 @@ const WorkHistory = (props: WorkHistoryProps) => {
             alignItems: direction,
             flexDirection: 'column'
         }}>
-            <Typography variant={"h6"} color={'#21CE6B'} fontWeight={"bold"} textAlign={textAlign}>
+            <Typography variant={"h6"} component={"h2"} color={'#21CE6B'} fontWeight={"bold"} textAlign={textAlign}>
                 {company}
             </Typography>
             <Typography variant={"subtitle1"} textAlign={textAlign}>

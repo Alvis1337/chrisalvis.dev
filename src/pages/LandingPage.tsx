@@ -32,7 +32,7 @@ const LandingPage = () => {
                     flexWrap: 'wrap',
                 }} spacing={2}>
                     <Grid item>
-                        <Typography variant={"h4"} textAlign={"left"}>{greetingList.intro}</Typography>
+                        <Typography variant={"h4"} component={"p"} textAlign={"left"}>{greetingList.intro}</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Typography variant={"h1"} textAlign={"center"}>{greetingList.name}</Typography>

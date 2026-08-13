@@ -1,0 +1,14 @@
+# Chris Alvis
+
+> Personal portfolio and resume site for Chris Alvis, a DevOps/full-stack engineer. The site showcases work experience, technical skills, and certifications.
+
+## Pages
+
+- [Home](https://chrisalvis.me/): Landing page with intro, work experience, technology skills, and certifications.
+
+## Resources
+
+- [Resume (PDF)](https://s3.us-east-2.amazonaws.com/chrisalvis.me/resume.pdf)
+- [GitHub](https://github.com/Alvis1337)
+- [LinkedIn](https://www.linkedin.com/in/devops-alvis/)
+- [Source code for this site](https://github.com/Alvis1337/chrisalvis.me)
