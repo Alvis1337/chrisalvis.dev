@@ -6,7 +6,7 @@ Personal portfolio / resume site.
 
 ## Tech Stack
 
-**Frontend:** React 18, TypeScript, Vite, Material UI, Redux Toolkit  
+**Frontend:** React 19, TypeScript, Vite, Material UI, Redux Toolkit  
 **Hosting:** Cloudflare Pages  
 **Deploy:** GitHub Actions → Cloudflare Pages on push to `main`
 

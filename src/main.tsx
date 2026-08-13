@@ -2,8 +2,7 @@ import {StrictMode} from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {Provider} from "react-redux";
-import {persistor, store} from "./store/store.ts";
-import {PersistGate} from "redux-persist/integration/react";
+import {store} from "./store/store.ts";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import Layout from "./components/Layout.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
@@ -34,9 +33,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
-            <PersistGate persistor={persistor}>
-                <RouterProvider router={router}/>
-            </PersistGate>
+            <RouterProvider router={router}/>
         </Provider>
     </StrictMode>
 
