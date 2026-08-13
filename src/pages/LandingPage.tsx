@@ -1,17 +1,15 @@
 import {Button, Grid, Grow, IconButton} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import LanguageIcon from "../components/LanguageIcon.tsx";
-import {Suspense, useState, lazy} from "react";
+import {useState} from "react";
 import WorkHistory from "../components/WorkHistory.tsx";
 import {socialLinksList} from '../assets/socialLinks.tsx'
 import { technologyIconsList } from "../assets/technologyIcons.tsx";
 import { workExperienceList } from "../assets/workExperience.tsx";
 import { greetingList } from "../assets/greeting.tsx";
 
-import LoadingExperienceMarquee from "../components/LoadingExperienceMarquee.tsx";
+import ExperienceMarquee from "../components/ExperienceMarquee.tsx";
 import Certifications from "../components/Certifications.tsx";
-
-const ExperienceMarquee = lazy(() => import('../components/ExperienceMarquee.tsx'));
 
 const LandingPage = () => {
 
@@ -38,9 +36,7 @@ const LandingPage = () => {
                         <Typography variant={"h1"} textAlign={"center"}>{greetingList.name}</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                        <Suspense fallback={<LoadingExperienceMarquee/>}>
                         <ExperienceMarquee/>
-                        </Suspense>
                     </Grid>
                     <Grid item>
                         <Grid container sx={{
