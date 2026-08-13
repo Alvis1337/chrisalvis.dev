@@ -1,72 +1,72 @@
 export const technologyIconsList = [
     {
-        image: "https://img.icons8.com/color/512/000000/kubernetes.png",
+        image: "/tech-icons/kubernetes.png",
         alt: "Kubernetes",
         language: "Kubernetes"
     },
     // Gitlab CI/CD
     {
-        image: "https://img.icons8.com/color/512/000000/gitlab.png",
+        image: "/tech-icons/gitlab.png",
         alt: "Gitlab",
         language: "Gitlab"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/postgreesql.png",
+        image: "/tech-icons/postgreesql.png",
         alt: "PostgreSQL",
         language: "PostgreSQL"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/mysql-logo.png",
+        image: "/tech-icons/mysql-logo.png",
         alt: "MySQL",
         language: "MySQL"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/git.png",
+        image: "/tech-icons/git.png",
         alt: "Git",
         language: "Git"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/docker.png",
+        image: "/tech-icons/docker.png",
         alt: "Docker",
         language: "Docker"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/python--v1.png",
+        image: "/tech-icons/python--v1.png",
         alt: "Python",
         language: "Python"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/typescript.png",
+        image: "/tech-icons/typescript.png",
         alt: "TypeScript",
         language: "TypeScript"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/react-native.png",
+        image: "/tech-icons/react-native.png",
         alt: "React",
         language: "React"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/redux.png",
+        image: "/tech-icons/redux.png",
         alt: "Redux",
         language: "Redux"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/angularjs.png",
+        image: "/tech-icons/angularjs.png",
         alt: "Angular",
         language: "Angular"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/vue-js.png",
+        image: "/tech-icons/vue-js.png",
         alt: "Vue",
         language: "Vue"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/nodejs.png",
+        image: "/tech-icons/nodejs.png",
         alt: "Node",
         language: "Node"
     },
     {
-        image: "https://img.icons8.com/color/512/000000/mongodb.png",
+        image: "/tech-icons/mongodb.png",
         alt: "MongoDB",
         language: "MongoDB"
     },
