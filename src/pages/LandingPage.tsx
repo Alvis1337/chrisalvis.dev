@@ -48,14 +48,11 @@ const LandingPage = () => {
                             flexDirection: 'row',
                         }}>
                             <Grid item>
-                                {socialLinksList.map((link, index) => {
-                                        return (
-                                            <IconButton key={index} component={'a'} title={link.title} target={"_blank"} href={link.href}>
-                                                {link.icon}
-                                            </IconButton>
-                                        )
-                                    }
-                                )}
+                                {socialLinksList.map((link, index) => (
+                                    <IconButton key={index} component={'a'} title={link.title} aria-label={link.alt} target={"_blank"} href={link.href}>
+                                        {link.icon}
+                                    </IconButton>
+                                ))}
                             </Grid>
                         </Grid>
                     </Grid>
@@ -68,47 +65,21 @@ const LandingPage = () => {
                     flexDirection: 'row',
                     flexWrap: 'wrap',
                 }} spacing={4}>
-                    {technologyIconsList.map((language, index) => {
-                        if (more) {
-                            return (
-                                <Grow key={index} in={true} timeout={1000}>
-                                    <Grid item
-                                          sx={{
-                                              display: 'flex',
-                                              justifyContent: 'center',
-                                          }}
-                                          xs={4}
-                                          key={index}>
-                                        <LanguageIcon
-                                            key={index}
-                                            image={language.image}
-                                            alt={language.alt}
-                                            language={language.language}/>
-                                    </Grid>
-                                </Grow>
-                            )
-                        } else {
-                            if (index < 9) {
-                                return (
-                                    <Grow in={true} timeout={1000} key={index}>
-                                        <Grid item
-                                              sx={{
-                                                  display: 'flex',
-                                                  justifyContent: 'center',
-                                              }}
-                                              xs={4}
-                                              key={index}>
-                                            <LanguageIcon
-                                                key={index}
-                                                image={language.image}
-                                                alt={language.alt}
-                                                language={language.language}/>
-                                        </Grid>
-                                    </Grow>
-                                )
-                            }
-                        }
-                    })}
+                    {(more ? technologyIconsList : technologyIconsList.slice(0, 9)).map((language, index) => (
+                        <Grow key={index} in={true} timeout={1000}>
+                            <Grid item
+                                  sx={{
+                                      display: 'flex',
+                                      justifyContent: 'center',
+                                  }}
+                                  xs={4}>
+                                <LanguageIcon
+                                    image={language.image}
+                                    alt={language.alt}
+                                    language={language.language}/>
+                            </Grid>
+                        </Grow>
+                    ))}
                     <Grid item sx={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -134,12 +105,12 @@ const LandingPage = () => {
                 </Grid>
             </Grid>
             <Grid item md={8}>
-            <Grid container sx={{
+                <Grid container sx={{
                     justifyContent: 'center',
                     alignItems: 'center',
                     pb: '4rem'
                 }} spacing={2}>
-                <Certifications/>
+                    <Certifications/>
                 </Grid>
             </Grid>
         </Grid>
