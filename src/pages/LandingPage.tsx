@@ -11,11 +11,11 @@ import { greetingList } from "../assets/greeting.tsx";
 import LoadingExperienceMarquee from "../components/LoadingExperienceMarquee.tsx";
 import Certifications from "../components/Certifications.tsx";
 
+const ExperienceMarquee = lazy(() => import('../components/ExperienceMarquee.tsx'));
+
 const LandingPage = () => {
 
     const [more, setMore] = useState(false);
-
-    const ExperienceMarquee = lazy(() => import('../components/ExperienceMarquee.tsx'));
 
     return (
         <Grid container sx={{
