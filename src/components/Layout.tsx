@@ -68,12 +68,10 @@ const Layout = () => {
                 justifyContent: 'space-between',
             }}>
                 <Grid item xs={12}>
-                    <ThemeProvider theme={theme}>
-                        <CssBaseline/>
-                        <Navbar/>
-                        <ToastContainer/>
-                        <Outlet/>
-                    </ThemeProvider>
+                    <CssBaseline/>
+                    <Navbar/>
+                    <ToastContainer/>
+                    <Outlet/>
                 </Grid>
             </Grid>
         </ThemeProvider>
