@@ -12,6 +12,7 @@ export default defineConfig({
         compression({algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/]}),
         VitePWA({
             registerType: 'autoUpdate',
+            injectRegister: 'script-defer',
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'android-*', 'favicon-*'],
             manifest: {
                 name: 'Chris Alvis',
