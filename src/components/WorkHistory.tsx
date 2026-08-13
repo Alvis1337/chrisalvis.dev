@@ -1,16 +1,20 @@
 import { Grid, List, ListItem, ListItemText } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
+type Direction = 'flex-start' | 'flex-end';
+
 interface WorkHistoryProps {
     company: string;
     position: string;
     date: string;
     description: string | string[];
-    direction: string;
+    direction: Direction;
 }
 
 const WorkHistory = (props: WorkHistoryProps) => {
     const { company, position, date, description, direction } = props;
+    const isStart = direction === 'flex-start';
+    const textAlign = isStart ? 'left' : 'right';
 
     return (
         <Grid item xs={10} sx={{
@@ -18,13 +22,13 @@ const WorkHistory = (props: WorkHistoryProps) => {
             alignItems: direction,
             flexDirection: 'column'
         }}>
-            <Typography variant={"h6"} color={'#21CE6B'} fontWeight={"bold"} textAlign={direction === 'flex-start' ? 'left' : 'right'}>
+            <Typography variant={"h6"} color={'#21CE6B'} fontWeight={"bold"} textAlign={textAlign}>
                 {company}
             </Typography>
-            <Typography variant={"subtitle1"} textAlign={direction === 'flex-start' ? 'left' : 'right'}>
+            <Typography variant={"subtitle1"} textAlign={textAlign}>
                 {position}
             </Typography>
-            <Typography variant={"subtitle2"} textAlign={direction === 'flex-start' ? 'left' : 'right'}>
+            <Typography variant={"subtitle2"} textAlign={textAlign}>
                 {date}
             </Typography>
             {Array.isArray(description) ? (
@@ -34,27 +38,25 @@ const WorkHistory = (props: WorkHistoryProps) => {
                             key={index}
                             sx={{
                                 display: 'flex',
-                                justifyContent: direction === 'flex-start' ? 'flex-start' : 'flex-end',
+                                justifyContent: direction,
                                 alignItems: 'center', // Align bullets and text
                                 paddingLeft: 0,
                                 paddingRight: 0,
                             }}
                         >
                             <Typography variant="body1" sx={{
-                                marginRight: direction === 'flex-start' ? '8px' : '0',
-                                marginLeft: direction === 'flex-end' ? '8px' : '0',
-                                order: direction === 'flex-end' ? 2 : 0, // Position bullet on the right
+                                marginRight: isStart ? '8px' : '0',
+                                marginLeft: isStart ? '0' : '8px',
+                                order: isStart ? 0 : 2, // Position bullet on the right
                             }}>
                                 •
                             </Typography>
-                            <ListItemText primary={item} sx={{
-                                textAlign: direction === 'flex-start' ? 'left' : 'right',
-                            }} />
+                            <ListItemText primary={item} sx={{textAlign}} />
                         </ListItem>
                     ))}
                 </List>
             ) : (
-                <Typography variant={"body1"} textAlign={direction === 'flex-start' ? 'left' : 'right'}>
+                <Typography variant={"body1"} textAlign={textAlign}>
                     {description}
                 </Typography>
             )}

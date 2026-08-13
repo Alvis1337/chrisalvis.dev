@@ -8,12 +8,10 @@ import MaterialUISwitch from "./MaterialUISwitch.tsx";
 function Navbar() {
 
     const dispatch = useAppDispatch();
-    const theme = useAppSelector((state) => state.themeState)
-    const getTheme = !theme ? false : theme;
-
+    const darkTheme = useAppSelector((state) => state.themeState)
 
     const handleTheme = () => {
-        dispatch(setDarkTheme(!getTheme));
+        dispatch(setDarkTheme(!darkTheme));
     }
 
     return (
@@ -42,8 +40,7 @@ function Navbar() {
                         <FormGroup>
                             <FormControlLabel
                                 control={<MaterialUISwitch sx={{m: 1}}/>}
-                                checked={!!getTheme}
-                                defaultChecked
+                                checked={darkTheme}
                                 onChange={handleTheme}
                                 label={'Theme Switch'}/>
                         </FormGroup>

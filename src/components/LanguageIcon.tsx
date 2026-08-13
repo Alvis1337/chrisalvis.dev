@@ -1,4 +1,4 @@
-import {Grid} from "@mui/material";
+import {Box} from "@mui/material";
 
 interface LanguageIconProps {
     image: string;
@@ -8,7 +8,7 @@ interface LanguageIconProps {
 
 const LanguageIcon = (props: LanguageIconProps) => {
     return (
-            <Grid item component={"img"} xs={4} src={props.image} alt={props.alt} sx={{height: 'auto', width: {xs: '64px', md: '128px'}}}/>
+            <Box component={"img"} src={props.image} alt={props.alt} sx={{height: 'auto', width: {xs: '64px', md: '128px'}}}/>
     );
 }
 

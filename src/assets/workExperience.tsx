@@ -1,6 +1,5 @@
 export const workExperienceList = [
     {
-        title: "DevOps Engineer",
         company: "Alphatech Computing",
         startDate: "April 2019",
         endDate: "Present",
@@ -13,11 +12,10 @@ export const workExperienceList = [
             "Led initiatives in disaster recovery, orchestrated seamless cloud migrations, and optimized operations for small to medium businesses"
 
         ],
-        direction: 'flex-start',
+        direction: 'flex-start' as const,
         position: 'DevOps Engineer'
     },
     {
-        title: "STNA",
         company: "Kimes Nursing Home",
         startDate: "May 2018",
         endDate: "April 2019",
@@ -27,12 +25,11 @@ export const workExperienceList = [
             "Position, feed, bathe, dress and assist patients with grooming and other tasks",
             "Obtained state certification and completed continued education during entire stay at the role"
         ],
-        direction: 'flex-end',
-        position: 'Kimes Nursing Home'
+        direction: 'flex-end' as const,
+        position: 'STNA'
 
     },
     {
-        title: "Packaging Specialist I",
         company: "Quidel Corporation",
         startDate: "November 2016",
         endDate: "May 2018",
@@ -42,7 +39,7 @@ export const workExperienceList = [
             "Packaging of biomedical testing kits, products, live cells, mediums, etc",
             "Exercised and displayed flexibility working different stations and even entire departments when requested"
         ],
-        direction: 'flex-start',
+        direction: 'flex-start' as const,
         position: 'Packaging Specialist I'
 
     },
