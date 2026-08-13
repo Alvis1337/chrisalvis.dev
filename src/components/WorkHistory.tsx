@@ -25,10 +25,10 @@ const WorkHistory = (props: WorkHistoryProps) => {
             <Typography variant={"h6"} component={"h2"} color={'#21CE6B'} fontWeight={"bold"} textAlign={textAlign}>
                 {company}
             </Typography>
-            <Typography variant={"subtitle1"} textAlign={textAlign}>
+            <Typography variant={"subtitle1"} component={"p"} textAlign={textAlign}>
                 {position}
             </Typography>
-            <Typography variant={"subtitle2"} textAlign={textAlign}>
+            <Typography variant={"subtitle2"} component={"p"} textAlign={textAlign}>
                 {date}
             </Typography>
             {Array.isArray(description) ? (

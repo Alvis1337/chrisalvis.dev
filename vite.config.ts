@@ -52,7 +52,7 @@ export default defineConfig({
                 ]
             }
         }),        webfontDownload([
-                'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
+                'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=optional'
             ],
             {
                 injectAsStyleTag: true,
