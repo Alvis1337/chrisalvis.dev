@@ -1,72 +1,72 @@
 export const technologyIconsList = [
     {
-        image: "/tech-icons/kubernetes.png",
+        image: "/tech-icons/kubernetes",
         alt: "Kubernetes",
         language: "Kubernetes"
     },
     // Gitlab CI/CD
     {
-        image: "/tech-icons/gitlab.png",
+        image: "/tech-icons/gitlab",
         alt: "Gitlab",
         language: "Gitlab"
     },
     {
-        image: "/tech-icons/postgreesql.png",
+        image: "/tech-icons/postgreesql",
         alt: "PostgreSQL",
         language: "PostgreSQL"
     },
     {
-        image: "/tech-icons/mysql-logo.png",
+        image: "/tech-icons/mysql-logo",
         alt: "MySQL",
         language: "MySQL"
     },
     {
-        image: "/tech-icons/git.png",
+        image: "/tech-icons/git",
         alt: "Git",
         language: "Git"
     },
     {
-        image: "/tech-icons/docker.png",
+        image: "/tech-icons/docker",
         alt: "Docker",
         language: "Docker"
     },
     {
-        image: "/tech-icons/python--v1.png",
+        image: "/tech-icons/python--v1",
         alt: "Python",
         language: "Python"
     },
     {
-        image: "/tech-icons/typescript.png",
+        image: "/tech-icons/typescript",
         alt: "TypeScript",
         language: "TypeScript"
     },
     {
-        image: "/tech-icons/react-native.png",
+        image: "/tech-icons/react-native",
         alt: "React",
         language: "React"
     },
     {
-        image: "/tech-icons/redux.png",
+        image: "/tech-icons/redux",
         alt: "Redux",
         language: "Redux"
     },
     {
-        image: "/tech-icons/angularjs.png",
+        image: "/tech-icons/angularjs",
         alt: "Angular",
         language: "Angular"
     },
     {
-        image: "/tech-icons/vue-js.png",
+        image: "/tech-icons/vue-js",
         alt: "Vue",
         language: "Vue"
     },
     {
-        image: "/tech-icons/nodejs.png",
+        image: "/tech-icons/nodejs",
         alt: "Node",
         language: "Node"
     },
     {
-        image: "/tech-icons/mongodb.png",
+        image: "/tech-icons/mongodb",
         alt: "MongoDB",
         language: "MongoDB"
     },
