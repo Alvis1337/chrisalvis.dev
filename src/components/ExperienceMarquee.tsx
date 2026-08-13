@@ -2,23 +2,23 @@ import Typography from "@mui/material/Typography";
 import {useEffect, useState} from "react";
 import BlinkCursor from "./BlinkCursor.tsx";
 
-const ExperienceMarquee = () => {
-    const experiencedIn = [
-        'Full Stack Developer',
-        'Mobile Developer',
-        'UI/UX Designer',
-        'DevOps Engineer',
-        'Kubernetes Administrator',
-        'Systems Engineer',
-        'Database Administrator',
-        'Network Engineer'
-    ]
+const experiencedIn = [
+    'Full Stack Developer',
+    'Mobile Developer',
+    'UI/UX Designer',
+    'DevOps Engineer',
+    'Kubernetes Administrator',
+    'Systems Engineer',
+    'Database Administrator',
+    'Network Engineer'
+]
 
+const ExperienceMarquee = () => {
     const [visibleText, setVisibleText] = useState('')
 
     const [index, setIndex] = useState(0)
 
-    const [typing, setTyping] = useState(false)
+    const typing = visibleText.length === experiencedIn[index].length
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -32,20 +32,14 @@ const ExperienceMarquee = () => {
     }, [index])
 
     useEffect(() => {
-        if (visibleText.length === experiencedIn[index].length) {
-            setTyping(true)
-            setTimeout(() => {
-                setVisibleText('')
-                if(index < experiencedIn.length - 1) {
-                    setIndex(prev => prev + 1)
-                } else {
-                    setIndex(0)
-                }
-            }, 3000)
-        } else {
-            setTyping(false)
-        }
-    }, [visibleText, index])
+        if (!typing) return
+
+        const timeout = setTimeout(() => {
+            setVisibleText('')
+            setIndex(prev => prev < experiencedIn.length - 1 ? prev + 1 : 0)
+        }, 3000)
+        return () => clearTimeout(timeout)
+    }, [typing, index])
 
     return (
         <Typography variant={"h4"} color={'#21CE6B'} textAlign={"center"} fontWeight={"bold"} sx={{
